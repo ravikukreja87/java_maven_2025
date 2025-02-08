@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Login Functionality" guice-stage="DEVELOPMENT" parallel="classes">
+
+	<listeners>
+		<listener class-name="pom.demo.listeners.ScreenshotListener"></listener>
+	</listeners>
+
+	<parameter name="username" value="dummytom12345678945679" />
+	<parameter name="password" value="dummy" />
+
+	<test thread-count="5" name="Login Success" verbose="2">
+		<!--		<method-selectors>
+			<method-selector>
+
+			</method-selector>
+		</method-selectors>-->
+		<classes>
+			<class name="pom.demo.tests.LoginTest" />
+		</classes>
+	</test>
+	<!--Login Success test -->
+
+	<test thread-count="5" name="Login Failure" verbose="2">
+		<classes>
+			<class name="pom.demo.tests.LoginTestFail" />
+		</classes>
+	</test> <!--
+	Login Failure test -->
+
+
+</suite> <!--Default suite -->
