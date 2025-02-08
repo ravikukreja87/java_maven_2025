@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import utils.ScreenShotUtils;
+
 public class CheckboxesDemo {
 
 	public static void main(String[] args) throws InterruptedException {
@@ -17,6 +19,7 @@ public class CheckboxesDemo {
 
 		driver.findElement(By.xpath("(//input[@type='checkbox'])[1]")).click();
 		driver.findElement(By.xpath("(//input[@type='checkbox'])[2]")).click();
+		ScreenShotUtils.takeScreenShotOnCurrentScreen(driver);
 
 		driver.quit();
 

@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
+import utils.ScreenShotUtils;
+
 public class DragDrop {
 
 	public static void main(String[] args) throws InterruptedException {
@@ -28,7 +30,7 @@ public class DragDrop {
 //		actions.release();
 //		actions.build().perform();
 		Thread.sleep(2000);
-		
+		ScreenShotUtils.takeScreenShotOnCurrentScreen(driver);
 		String afterText = driver.findElement(By.xpath("//div[@id='droppable']/p")).getText();
 		System.out.println(afterText);
 		//Dropped!

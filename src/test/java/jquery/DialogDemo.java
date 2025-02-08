@@ -10,6 +10,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
+import com.assertthat.selenium_shutterbug.core.Shutterbug;
+
 public class DialogDemo {
 
 	public static void main(String[] args) throws InterruptedException {
@@ -19,9 +21,10 @@ public class DialogDemo {
 		driver.findElement(By.xpath("//a[contains(text(),'Modal f')]")).click();
 
 		WebElement frame = driver.findElement(By.className("demo-frame"));
+		
 		driver.switchTo().frame(0);
 		Thread.sleep(2000);
-
+	
 		String heading = driver.findElement(By.xpath("//div[@id='users-contain']/h1")).getText();
 		System.out.println(heading);
 		// Existing Users:
@@ -29,6 +32,8 @@ public class DialogDemo {
 		addUser(driver, "Jon", "jon@dummy.com", "dummy");
 		addUser(driver, "Mark", "mark@dummy.com", "dummy1");
 		addUser(driver, "Tom", "tom@dummy.com", "dummy2");
+		driver.switchTo().defaultContent();
+		Shutterbug.shootElement(driver, frame).save();
 
 //		driver.quit();
 	}

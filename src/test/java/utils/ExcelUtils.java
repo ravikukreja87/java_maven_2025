@@ -1,0 +1,83 @@
+package utils;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.apache.poi.EncryptedDocumentException;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
+
+public class ExcelUtils {
+
+	public static List<Map<String, Object>> readExcel() throws EncryptedDocumentException, IOException {
+
+		File file = new File("data/TestData.xlsx");
+
+		FileInputStream fis = new FileInputStream(file);
+
+		// Workbook
+
+		Workbook workbook = WorkbookFactory.create(fis);
+
+		// Sheets
+
+		Sheet sheet = workbook.getSheet("Data");
+
+		// First row in my sheet is a header row
+
+		Row headerRow = sheet.getRow(0);
+		List<String> headers = new ArrayList<String>();
+		// Iterate through all headers and store them into a list
+		for (Cell headerCell : headerRow) {
+			headers.add(headerCell.getStringCellValue());
+
+		}
+
+		// Rows
+		List<Map<String, Object>> fullData = new ArrayList<Map<String, Object>>();
+		Map<String, Object> dataRow = new HashMap<String, Object>();
+
+		for (int i = 1; i <= sheet.getLastRowNum(); i++) {
+
+			Row row = sheet.getRow(i);
+			// Cells
+			for (int j = 0; j < row.getPhysicalNumberOfCells(); j++) {
+				Cell cell = row.getCell(j);
+				String columnHeader = headers.get(j);
+
+				switch (cell.getCellType()) {
+				case STRING:
+					dataRow.put(columnHeader, cell.getStringCellValue());
+
+//					System.out.println(cell.getStringCellValue());
+					break;
+				case NUMERIC:
+					dataRow.put(columnHeader, cell.getNumericCellValue());
+
+//					System.out.println(cell.getNumericCellValue());
+					break;
+
+				default:
+					System.out.println("Unknown Type");
+				}
+
+			}
+			fullData.add(dataRow);
+			dataRow = new HashMap<String, Object>(); //Empty the map
+		}
+
+		workbook.close();
+		fis.close();
+
+		return fullData;
+	}
+
+}
