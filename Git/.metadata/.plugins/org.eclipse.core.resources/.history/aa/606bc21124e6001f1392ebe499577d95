@@ -1,0 +1,16 @@
+import java.io.IOException;
+
+import org.apache.poi.EncryptedDocumentException;
+
+import utils.ExcelUtils;
+
+public class MainRunner {
+	
+	public static void main(String[] args) throws EncryptedDocumentException, IOException {
+		
+		
+		System.out.println(ExcelUtils.readExcel());
+		
+	}
+
+}

@@ -1,0 +1,4 @@
+Feature: Login Functionality
+	In order to test the login functionality of Sauce Demo Application
+	As a visual_user
+	I want to successfully login into the application

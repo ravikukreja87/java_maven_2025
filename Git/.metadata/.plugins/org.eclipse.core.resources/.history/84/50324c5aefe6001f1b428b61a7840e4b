@@ -1,0 +1,63 @@
+package steps;
+
+import io.cucumber.java.en.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class LoginSteps {
+	
+	private final WebDriver driver = new ChromeDriver();
+
+	@Given("User opens Chrome browser")
+	public void user_opens_chrome_browser() {
+		// Write code here that turns the phrase above into concrete actions
+		throw new io.cucumber.java.PendingException();
+	}
+
+	@Given("User is on login page")
+	public void user_is_on_login_page() {
+		// Write code here that turns the phrase above into concrete actions
+		throw new io.cucumber.java.PendingException();
+	}
+
+	@When("User enters valid username standard_user and password secret_sauce")
+	public void user_enters_valid_username_standard_user_and_password_secret_sauce() {
+		// Write code here that turns the phrase above into concrete actions
+		throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("User should successfully login")
+	public void user_should_successfully_login() {
+		// Write code here that turns the phrase above into concrete actions
+		throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("User should be on inventory page")
+	public void user_should_be_on_inventory_page() {
+		// Write code here that turns the phrase above into concrete actions
+		throw new io.cucumber.java.PendingException();
+	}
+
+	@When("User enters valid username standard_user and invalid password secret")
+	public void user_enters_valid_username_standard_user_and_invalid_password_secret() {
+		// Write code here that turns the phrase above into concrete actions
+		throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("Login should fail")
+	public void login_should_fail() {
+		// Write code here that turns the phrase above into concrete actions
+		throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("User should be on login page")
+	public void user_should_be_on_login_page() {
+		// Write code here that turns the phrase above into concrete actions
+		throw new io.cucumber.java.PendingException();
+	}
+
+}

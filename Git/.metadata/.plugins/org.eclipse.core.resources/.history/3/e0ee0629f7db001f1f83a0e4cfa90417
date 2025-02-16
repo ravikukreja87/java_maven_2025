@@ -1,0 +1,19 @@
+package pom.demo.listeners;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.ITestListener;
+
+import pom.demo.pages.MainPage;
+import pom.demo.utils.ScreenShotUtils;
+
+public class ScreenshotListener extends LoginTestFail implements ITestListener {
+
+
+
+
+	
+	void onTestFailure(ITestListener result) {
+		ScreenShotUtils.takeFullPageScreenShot(driver);
+	}
+
+}

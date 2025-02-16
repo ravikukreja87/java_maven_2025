@@ -1,0 +1,135 @@
+{
+  "id": "8b14ba61-c556-4232-809c-3da36d137ade",
+  "version": "2.0",
+  "name": "IDEProject",
+  "url": "https://the-internet.herokuapp.com/",
+  "tests": [{
+    "id": "d964356b-76e6-4068-b1a9-13f7e91944ea",
+    "name": "GoogleSearch",
+    "commands": [{
+      "id": "57abb7c6-470b-4cf2-bf91-a64bf57381a1",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3c8e5fbb-d01d-4e0c-8412-0cad27b75fee",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1048",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "64fe940f-8b62-4229-8fbf-3f653bb6fe3c",
+      "comment": "",
+      "command": "click",
+      "target": "id=APjFqb",
+      "targets": [
+        ["id=APjFqb", "id"],
+        ["name=q", "name"],
+        ["css=#APjFqb", "css:finder"],
+        ["xpath=//textarea[@id='APjFqb']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b624e3ac-9b08-4ce2-8ff1-33fa428a7b7a",
+      "comment": "",
+      "command": "type",
+      "target": "id=APjFqb",
+      "targets": [
+        ["id=APjFqb", "id"],
+        ["name=q", "name"],
+        ["css=#APjFqb", "css:finder"],
+        ["xpath=//textarea[@id='APjFqb']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "this is techcanvass training"
+    }, {
+      "id": "4f28965b-9066-4506-b1b8-188aaf3608fe",
+      "comment": "",
+      "command": "click",
+      "target": "css=.UUbT9",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "06e50aa4-0622-42ae-9651-07311e581ec2",
+      "comment": "",
+      "command": "click",
+      "target": "id=APjFqb",
+      "targets": [
+        ["id=APjFqb", "id"],
+        ["name=q", "name"],
+        ["css=#APjFqb", "css:finder"],
+        ["xpath=//textarea[@id='APjFqb']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0579342c-37d4-4de9-a47c-533696eb7270",
+      "comment": "",
+      "command": "click",
+      "target": "css=.UUbT9",
+      "targets": [
+        ["css=.UUbT9", "css:finder"],
+        ["xpath=//form/div/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9c08016b-2226-43e2-b9dd-c9256c0f8a03",
+      "comment": "",
+      "command": "click",
+      "target": "css=.qarstb",
+      "targets": [
+        ["css=.qarstb", "css:finder"],
+        ["xpath=//body/div/div[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1684d8fa-1175-442b-8d49-371d3c162e5a",
+      "comment": "",
+      "command": "click",
+      "target": "css=center:nth-child(1) > .gNO89b",
+      "targets": [
+        ["css=center:nth-child(1) > .gNO89b", "css:finder"],
+        ["xpath=(//input[@name='btnK'])[2]", "xpath:attributes"],
+        ["xpath=//div[3]/center/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e0f02c20-56e6-4f08-bb36-aa201f1736e2",
+      "comment": "I will wait for target element to appear, max for 30 secs",
+      "command": "waitForElementPresent",
+      "target": "css=#uLEOKb .LC20lb",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "c9147689-01a1-4e1d-9988-e2d6638cef14",
+      "comment": "",
+      "command": "click",
+      "target": "css=#uLEOKb .LC20lb",
+      "targets": [
+        ["css=#uLEOKb .LC20lb", "css:finder"],
+        ["xpath=//div[@id='uLEOKb']/div/div/div/div/div/span/a/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Techcanvass: Online IT certifications Courses and Bootcamps')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "675e1123-5e4d-4dae-af95-c6887f633484",
+    "name": "NavigationTest",
+    "commands": []
+  }],
+  "suites": [{
+    "id": "acc4e933-97fa-44f7-a114-6d4bfe94d393",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["d964356b-76e6-4068-b1a9-13f7e91944ea"]
+  }],
+  "urls": ["https://www.google.com/"],
+  "plugins": []
+}

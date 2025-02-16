@@ -1,0 +1,9 @@
+Feature: Cart Items Total
+	In order to check the total amount charged to the user along with taxes for buying products from sauce demo ecom portal
+	As a standard user
+	I want to successfully place an order with correct amount and totals
+	
+Scenario: Order placed successfully with two products
+
+
+Scenario: Order placed successfully with correct amount and tax calculations

@@ -1,0 +1,14 @@
+pom\demo\pages\DisappearingElementsPage.class
+pom\demo\tests\DisappearingElementTest.class
+pom\demo\pages\GalleryPage.class
+pom\demo\utils\FileUtils.class
+pom\demo\utils\ScreenShotUtils.class
+pom\demo\assertions\CustomAssertion.class
+pom\demo\pages\LoginPage.class
+pom\demo\pages\MainPage.class
+pom\demo\tests\LoginTestFail.class
+pom\demo\pages\SecurePage.class
+pom\demo\traditional\Logout.class
+pom\demo\tests\LoginTest.class
+pom\demo\traditional\Login.class
+pom\demo\tests\SampleTest.class

@@ -1,0 +1,30 @@
+package utils;
+
+import java.io.FileInputStream;
+
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
+
+public class ExcelUtils {
+
+	public void readExcel() {
+
+		File file = new File("data/TestData.xlsx");
+
+		FileInputStream fis = new FileInputStream(file);
+
+		// Workbook
+
+		Workbook workbook = WorkbookFactory.create(fis);
+
+		// Sheets
+		
+		Sheet sheet = workbook.getSheet("Data");
+
+		// Rows
+
+		// Cells
+
+	}
+
+}

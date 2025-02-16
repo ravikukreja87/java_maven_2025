@@ -1,0 +1,13 @@
+package reporting;
+
+import com.aventstack.extentreports.reporter.ExtentReporter;
+
+public class ExtentReporterSetup {
+	
+	public static ExtentReporter extent;
+	
+	public static ExtentReport getInstance() {
+		
+	}
+
+}

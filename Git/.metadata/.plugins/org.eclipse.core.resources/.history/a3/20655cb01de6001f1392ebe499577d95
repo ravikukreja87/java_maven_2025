@@ -1,0 +1,12 @@
+import utils.ExcelUtils;
+
+public class MainRunner {
+	
+	public static void main(String[] args) {
+		
+		
+		ExcelUtils.readExcel();
+		
+	}
+
+}

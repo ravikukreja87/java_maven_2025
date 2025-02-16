@@ -1,0 +1,18 @@
+package reporting;
+
+import com.aventstack.extentreports.reporter.ExtentReporter;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+
+public class ExtentReporterSetup {
+	
+	public static ExtentReporter extent;
+	
+	public static ExtentReport getInstance() {
+		
+		if(extent == null) {
+			ExtentSparkReporter sparkReporter = new ExtentSparkReporter("report.html");
+		}
+		
+	}
+
+}

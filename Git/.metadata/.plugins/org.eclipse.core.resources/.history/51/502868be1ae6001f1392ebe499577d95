@@ -1,0 +1,8 @@
+package constants;
+
+public class LocatorConstant {
+
+	public static final String LOGIN_USER_NAME = "user-name";
+	public static final String LOGIN_PASSWORD = "password";
+
+}

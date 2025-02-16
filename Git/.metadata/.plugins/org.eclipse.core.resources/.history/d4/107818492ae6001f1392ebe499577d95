@@ -1,0 +1,27 @@
+package pom.demo.assertions;
+
+import org.testng.Assert;
+
+public class CustomAssertion {
+
+	/**
+	 * @param actualFlashMsg
+	 * @param expectedFlashMsg
+	 */
+	public static void validateExpectedContainsInActual(String actualFlashMsg, String expectedFlashMsg) {
+		Assert.assertTrue(actualFlashMsg.contains(expectedFlashMsg));
+		System.out.println("Assertion Completed for " + expectedFlashMsg);
+	}
+	
+	public static boolean softAssertExpectedContainsInActual(String actualFlashMsg, String expectedFlashMsg) {
+		if(actualFlashMsg.contains(expectedFlashMsg)) {
+			System.out.println("Assertion Completed for " + expectedFlashMsg);
+			return true;
+		} else {
+			//Soft assertion failure
+			System.out.println("Soft Assertion Failed. Actual Result - " + actualFlashMsg + "\tExpected Result - " + expectedFlashMsg);
+		}
+
+	}
+
+}
