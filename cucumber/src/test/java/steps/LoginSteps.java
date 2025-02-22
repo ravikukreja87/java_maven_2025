@@ -8,9 +8,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.*;
 
-public class LoginSteps {
+public class LoginSteps  {
 
-    private WebDriver driver;
+
+
+    WebDriver driver = BaseSteps.getDriver();
+
 
     @Given("User opens Chrome browser")
     public void user_opens_chrome_browser() {
@@ -60,8 +63,8 @@ public class LoginSteps {
 
     }
 
-	@And("Browser is closed")
-	public void browserIsClosed() {
-		driver.quit();
-	}
+    @And("Browser is closed")
+    public void browserIsClosed() {
+        driver.quit();
+    }
 }

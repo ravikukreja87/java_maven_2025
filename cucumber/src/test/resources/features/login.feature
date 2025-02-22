@@ -1,8 +1,9 @@
+@regression
 Feature: Login Functionality
 	In order to test the login functionality of Sauce Demo Application
 	As a visual_user
 	I want to successfully login into the application
-	
+
 Scenario: Successful login with valid credentials
 	Given User opens Chrome browser
 	And User is on login page

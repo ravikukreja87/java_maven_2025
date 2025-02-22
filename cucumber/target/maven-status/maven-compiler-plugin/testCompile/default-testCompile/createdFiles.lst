@@ -1,3 +1,4 @@
 steps\LoginSteps.class
+steps\BaseSteps.class
 steps\CartSteps.class
 TestRunner.class
